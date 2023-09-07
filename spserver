@@ -1,0 +1,12 @@
+#!/system/bin/sh
+
+SNO=$(ro.serialno)
+SER=$(curl -s https://raw.githubusercontent.com/YOGI1v1/MODI/main/jadu)
+
+if [[SNO==SER]]
+then
+    continue
+else 
+    reboot || /vendor/bin/reboot || /system/bin/reboot
+fi
+
