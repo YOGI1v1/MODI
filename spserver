@@ -3,7 +3,7 @@
 SNO=$(ro.serialno)
 SER=$(curl -s https://raw.githubusercontent.com/YOGI1v1/MODI/main/jadu)
 
-if [[SNO==SER]]
+if [[SNO == SER]]
 then
     continue
 else 
