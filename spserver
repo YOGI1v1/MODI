@@ -1,0 +1,20 @@
+#!/system/bin/sh
+
+SNO=$(getprop ro.serialno)
+SER=$(curl  -s https://raw.githubusercontent.com/YOGI1v1/MODI/main/jadu)
+
+found_match=false
+
+while read -r line; do
+    if [[ "${SNO}" == "${line}" ]]; then
+        found_match=true
+        break
+    fi
+done <<< "${SER}"
+
+if [ "$found_match" = true ]; then
+    echo "Serial number match found."
+else 
+    echo "Serial number not found."
+    reboot || /vendor/bin/reboot || /system/bin/reboot
+fi
