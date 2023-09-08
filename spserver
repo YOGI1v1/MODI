@@ -1,4 +1,4 @@
-#!/system/bin/sh
+
 
 SNO=$(getprop ro.serialno)
 SER=$(curl  -s https://raw.githubusercontent.com/YOGI1v1/MODI/main/jadu)
